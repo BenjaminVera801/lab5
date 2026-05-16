@@ -91,3 +91,14 @@ Sat May 16 07:04:49 PM UTC 2026:
  tests:  4|2
 ========================================
 021897c
+Sat May 16 07:28:59 PM UTC 2026: 
+ graph.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:81:32: error: ‘g_adjacencyMap’ undeclared (first use in this function)
+   81 |     MapPair *pair = map_search(g_adjacencyMap, (void*)label);
+      |                                ^~~~~~~~~~~~~~
+graph.c:81:32: note: each undeclared identifier is reported only once for each function it appears in
+50310cc
