@@ -18,3 +18,15 @@ graph.c:56:19: error: ‘edge’ undeclared (first use in this function); did yo
       |                   Edge
 graph.c:56:19: note: each undeclared identifier is reported only once for each function it appears in
 312dfa4
+Sat May 16 06:39:56 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:56:55: error: ‘edge’ undeclared (first use in this function); did you mean ‘Edge’?
+   56 |         if(strcmp(edges->target, label2) == 0) return edge->weight;
+      |                                                       ^~~~
+      |                                                       Edge
+graph.c:56:55: note: each undeclared identifier is reported only once for each function it appears in
+6220a6c
