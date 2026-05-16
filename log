@@ -53,3 +53,29 @@ Sat May 16 06:52:46 PM UTC 2026:
  tests:  2|4
 ========================================
 4eb2d82
+Sat May 16 06:56:38 PM UTC 2026: 
+ graph.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:50:18: error: invalid initializer
+   50 |     Edge edges = (Edge*)malloc(sizeof(Edge));
+      |                  ^
+graph.c:51:10: error: invalid type argument of ‘->’ (have ‘Edge’)
+   51 |     edges->target = (char*)dest;
+      |          ^~
+graph.c:52:10: error: invalid type argument of ‘->’ (have ‘Edge’)
+   52 |     edges->weight = weight;
+      |          ^~
+graph.c:53:28: error: incompatible type for argument 2 of ‘list_pushBack’
+   53 |     list_pushBack(adjList, edges);
+      |                            ^~~~~
+      |                            |
+      |                            Edge
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:35: note: expected ‘void *’ but argument is of type ‘Edge’
+   20 | void list_pushBack(List *L, void *dato);
+      |                             ~~~~~~^~~~
+cb6f365
